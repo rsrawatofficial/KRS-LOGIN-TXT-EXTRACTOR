@@ -19,9 +19,9 @@ log_channel = PREMIUM_LOGS
 apiurl = "https://api.classplusapp.com"
 s = cloudscraper.create_scraper() 
 
- keyboard = [
+ buttons = [
     [
-      InlineKeyboardButton("🔘 Classplus 🔘", callback_data="cp")
+      InlineKeyboardButton("🔘 Classplus 🔘", callback_data="classplus")
     ]
  ]
 
