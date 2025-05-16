@@ -19,7 +19,12 @@ log_channel = PREMIUM_LOGS
 apiurl = "https://api.classplusapp.com"
 s = cloudscraper.create_scraper() 
 
-@app.on_message(filters.command(["cp"]))
+ keyboard = [
+    [
+      InlineKeyboardButton("🔘 Classplus 🔘", callback_data="cp")
+    ]
+ ]
+
 async def classplus_txt(app, message):
     # Step 1: Ask for details
     details = await app.ask(message.chat.id, "<blockquote>**Send Login Token or Send ORG_CODE & Mobile like this : \n ORG_CODE*Mobile**</blockquote>")
